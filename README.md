@@ -1,13 +1,13 @@
 
 # Welcome to my Sovanta Challenge!
 
-As the project is already created, cds init is not necessary,
+As the project is already created, running cds init is not necessary,
 you must however follow a few simple instructions.
 
 I recommend using Visual Studio Code in order to follow this README guide.
 
 Firstly:
-Run `npm i` in order to make sure you have all the dependencies needed.
+Run `npm i` in order to make sure you have all the dependencies needed. Don't forget about running `npm i -g @sap/cds-dk` in case you have never used 'cds' in your machine.
 
 Afterwards: 
 Run `cds deploy --to sqlite:db/project-manager.db`
@@ -18,11 +18,11 @@ Now we are ready for the next step:
 Run `cds watch`
 This command will serve the application let you interact with the data. Note that any update to a file, whether it's a schema or a service, will trigger a server refresh.
 
-Now you may access the 'http://localhost:4004' link and see a basic frontend which comes with a few links, should you click on the "Projects" one, you will be prompted for a username and a password, those are 'pepito' and 'pepitoo', respectively. 
+Now you may access the 'http://localhost:4004' link and see a basic frontend which comes with a few links, should you click on "Projects", you will see the information related to the Projects.
 
 ## Testing
 
-While `cds watch` is running, open another terminal and run the testing file which you can find at *./srv/tests/testing.js*. To do so, you may just use `npm ./srv/tests/testing.js`.
+While `cds watch` is running, open another terminal and run the testing file which you can find at *./srv/tests/testing.js*. To do so, you may just use `node ./srv/tests/testing.js`.
 
 Besides this type of testing, you may also access to the *./srv/tests/crud.http* file. Through the 'REST Client' VS Code extension, you may GET, POST, PUT and/or DELETE information from the Projects schema.
 Simple CURL commands could be an alternative to this.
