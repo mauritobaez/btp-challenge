@@ -1,0 +1,42 @@
+{
+  "name": "challenge",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "axios": "^1.6.2",
+    "chai": "^4.3.10",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1.4.0"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "impl": "@cap-js/sqlite",
+        "credentials": {
+          "url": "./db/project-manager.db"
+        }
+      },
+      "auth": {
+        "kind": "basic",
+        "users": {
+          "pepito": {
+            "password": "pepitoo",
+            "roles": [
+              "admin"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "scripts": {
+    "start": "cds-serve"
+  }
+}

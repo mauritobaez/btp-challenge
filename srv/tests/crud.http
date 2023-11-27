@@ -1,0 +1,38 @@
+
+###
+#
+# Get Projects
+#
+GET http://localhost:4004/odata/v4/project-manager/Project
+
+###
+#
+# Get Project wit ID 150
+#
+GET http://localhost:4004/odata/v4/project-manager/Project(ID=150)
+
+###
+#
+# Create Project with ID 150
+#
+POST http://localhost:4004/odata/v4/project-manager/Project
+Content-Type: application/json
+Authorization: Basic cGVwaXRvOnBlcGl0b28=
+
+{"ID": 150, "title": "Some Title", "description": "Some Description", "beginning": "2023-07-20"}
+
+###
+#
+# Update Project with ID 150
+#
+PUT http://localhost:4004/odata/v4/project-manager/Project(ID=150)
+Content-Type: application/json
+Authorization: Basic cGVwaXRvOnBlcGl0b28=
+
+{"title": "Some Other Title", "description": "Some Other Description", "beginning": "2023-07-20"}
+
+###
+#
+# Delete Project with ID 150
+#
+DELETE http://localhost:4004/odata/v4/project-manager/Project(ID=150)
